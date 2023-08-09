@@ -57,17 +57,9 @@ $button-outline-color: $black-color;
 /* SEARCH */
 $search-color: $black-color;
 $search-placeholder-color: $black-color;
-
 $category-hover-color: $white-color;
 $category-hover-bg-color: $primary;
 
 $category-hover-transition: 0.1s linear;
 
 $product-search-font-size: 14px;
-
-/*ANIMATION*/
-$animation-time: 250ms;
-//animation placeholder
-%hover-animation {
-  transition-duration: $animation-time;
-}

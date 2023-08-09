@@ -22,14 +22,12 @@
       }
 
       &::before {
-        @extend %hover-animation;
         content: "";
         position: absolute;
         bottom: -4px;
         left: 0;
         width: 45px;
         border-bottom: 4px solid $primary;
-
       }
     }
 
@@ -53,9 +51,7 @@
 
             &.active,
             &:hover {
-              @extend %hover-animation;
               &::before {
-                @extend %hover-animation;
                 content: "";
                 position: absolute;
                 bottom: -4px;
@@ -93,11 +89,8 @@
             background-color: $link-color;
             font-size: 0;
 
-            &.active{
-              background-color: $primary;
-            }
+            &.active,
             &:hover {
-              @extend %hover-animation;
               background-color: $primary;
             }
           }

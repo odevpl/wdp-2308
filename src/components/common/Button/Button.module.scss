@@ -12,7 +12,6 @@
   padding: 10px 30px;
 
   &:not(.noHover):hover {
-    @extend %hover-animation;
     color: $button-color !important;
     background-color: $primary;
     text-decoration: none;
@@ -38,6 +37,5 @@
   &:not(.noHover):hover {
     background-color: $button-outline-color;
     color: $button-color;
-    @extend %hover-animation;
   }
 }

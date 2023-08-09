@@ -62,19 +62,16 @@
   }
 
   &.active:hover {
-    @extend %hover-animation;
     .iconWrapper {
       color: $featurebox-hover;
 
       &::after {
-        @extend %hover-animation;
         background-color: $primary;
         border-color: $primary;
       }
     }
 
     .content {
-      @extend %hover-animation;
       color: $primary;
     }
   }

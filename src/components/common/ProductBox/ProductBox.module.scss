@@ -100,20 +100,15 @@
 
 
 .root:hover {
-  @extend %hover-animation;
   .photo {
-    @extend %hover-animation;
     .buttons {
-      @extend %hover-animation;
       visibility: visible;
       opacity: 1;
     }
   }
 
   .actions {
-    @extend %hover-animation;
     .priceContainer {
-      @extend %hover-animation;
       background-color: $primary;
     }
   }

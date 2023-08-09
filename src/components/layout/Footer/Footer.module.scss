@@ -72,7 +72,6 @@
             text-decoration: none;
 
             &:hover {
-              @extend %hover-animation;
               color: $primary;
             }
           }

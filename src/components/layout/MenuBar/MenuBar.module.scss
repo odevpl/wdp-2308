@@ -36,12 +36,7 @@
       font-weight: 500;
       letter-spacing: 1px;
 
-      &:hover {
-        @extend %hover-animation;
-        background-color: $primary;
-        color: $menubar-light-link-color;
-        border-color: $primary;
-      }
+      &:hover,
       &.active {
         background-color: $primary;
         color: $menubar-light-link-color;
