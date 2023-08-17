@@ -10,6 +10,7 @@ import Button from '../Button/Button';
 import { addProductToCompare } from '../../../redux/comparableProductsRedux';
 import { toggleFavorite } from '../../../redux/productsRedux';
 import StarRating from '../StarRating/StarRating';
+import { Link } from 'react-router-dom';
 
 const ProductBox = ({
   name,
@@ -34,18 +35,24 @@ const ProductBox = ({
 
   return (
     <div className={styles.root}>
-      <div className={styles.photo}>
-        {promo && <div className={styles.sale}>{promo}</div>}
-        <img src={imgSrc} alt={name} />
-        <div className={styles.buttons}>
-          <Button variant='small'>Quick View</Button>
-          <Button variant='small'>
-            <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
-          </Button>
+      <Link to={`product/${id}`} style={{ textDecoration: 'none' }}>
+        <div className={styles.photo}>
+          {promo && <div className={styles.sale}>{promo}</div>}
+          <img src={imgSrc} alt={name} />
+          <div className={styles.buttons}>
+            <Button variant='small' onClick={e => e.preventDefault()}>
+              Quick View
+            </Button>
+            <Button variant='small' onClick={e => e.preventDefault()}>
+              <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
+            </Button>
+          </div>
         </div>
-      </div>
+      </Link>
       <div className={styles.content}>
-        <h5>{name}</h5>
+        <Link to={`product/${id}`} style={{ textDecoration: 'none' }}>
+          <h5>{name}</h5>
+        </Link>
         <div className={styles.starsWrapper}>
           <StarRating stars={stars} userRating={userRating} id={id} />
         </div>

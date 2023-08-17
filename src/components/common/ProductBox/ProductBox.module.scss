@@ -19,6 +19,7 @@
     overflow: hidden;
     align-items: flex-end;
 
+
     .sale {
       position: absolute;
       top: -30px;
@@ -30,12 +31,16 @@
       padding: 30px 15px 5px 15px;
     }
 
+
+
     .buttons {
       visibility: hidden;
       opacity: 0;
       transition: $product-box-button-visibility, $product-box-button-opacity;
       display: flex;
       justify-content: space-between;
+
+
     }
   }
 
