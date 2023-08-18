@@ -1,0 +1,40 @@
+@import "../../../../styles/settings.scss";
+
+.productinfo {
+  width: 249px;
+  height: 106px;
+  filter: drop-shadow(0px 3px 3px rgba(1,2,2,0.24));
+  background-color: $gallery-productinfo-bg;
+  position: absolute;
+  right: 0;
+  bottom: 113px;
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.productinfo ::before {
+  content: "";
+  position: absolute;
+  top: -23px;
+  left: -20px;
+  width: 45px;
+  height: 50px;
+  background-color: $gallery-productinfo-corner;
+  transform: rotate(45deg);
+
+}
+
+.productinfo ::after {
+  content: "";
+  position: absolute;
+  bottom: -23px;
+  right: -20px;
+  width: 45px;
+  height: 50px;
+  background-color: $gallery-productinfo-corner;
+  transform: rotate(45deg);
+}

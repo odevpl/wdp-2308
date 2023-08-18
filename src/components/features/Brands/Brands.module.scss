@@ -1,0 +1,65 @@
+@import "../../../styles/settings.scss";
+
+.brandsLine {
+  width: 100%;
+  height: 150px;
+  position: relative;
+}
+
+.brandsLine::before {
+  content: "";
+  position: absolute;
+  bottom: 130px;
+  left: 0;
+  width: 100%;
+  border-bottom: 2px solid $darken-white-color;
+}
+
+.brandsLine::after {
+  content: "";
+  position: absolute;
+  top: 130px;
+  left: 0;
+  width: 100%;
+  border-bottom: 2px solid $darken-white-color;
+}
+
+.brandIcon {
+  font-size: $icons-font-size;
+ }
+
+.leftButton {
+  height: 60px;
+  width: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightButton {
+  height: 60px;
+  width: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brandImages {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 2px);
+  max-width: 100%;
+  bottom: 120px;
+  transform: translateY(-120px);
+
+  img{
+    border: 2px solid $darken-white-color;
+    width: 90px;
+    height: 60px;
+    object-fit: cover;
+  }
+}
+
+
+
+

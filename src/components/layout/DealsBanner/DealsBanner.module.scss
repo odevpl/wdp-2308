@@ -1,0 +1,155 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  $banner-height: 400px;
+
+  margin-bottom: 5%;
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: $black-color;
+    height: 100%;
+    width: 100%;
+  }
+
+  .bannerWrapper {
+    display: flex;
+    height: $banner-height;
+
+    .highlight {
+      font-weight: $highlight-font-weight;
+      font-size: 1.2em;
+    }
+
+    .bigTile {
+      width: 50%;
+      margin: 10px;
+      margin-left: 0;
+
+      .textContainer {
+        color: $white-color;
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        transform: translate(-0%, -100%);
+        font-size: $big-tile-base-font-size;
+        line-height: 1.25;
+        padding: 7.5%;
+
+        .discountBox {
+          border: 3px solid $white-color;
+          width: fit-content;
+          padding: 2.5px 7.5px;
+          margin-top: 5px;
+        }
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .overlay {
+      position: relative;
+    }
+
+    .overlay::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 90%;
+      height: 85%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.45);
+    }
+
+    .smallTilesWrapper {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      height: $banner-height;
+      margin-left: 10px;
+
+      .smallTile {
+        display: flex;
+        height: 50%;
+        margin: 10px 0;
+        align-items: center;
+        justify-content: space-between;
+
+        .textContainer {
+          padding: 5%;
+          font-size: $small-tile-base-font-size;
+          line-height: 1;
+
+          .highlight {
+            font-size: 1em;
+          }
+
+          .subtitle {
+            font-size: 0.65em;
+          }
+        }
+
+        img {
+          height: 100%;
+          width: 45%;
+        }
+      }
+
+      .upperTile {
+        background-color: $upper-tile-bg;
+        flex-direction: row-reverse;
+
+        .priceHighlight {
+          display: block;
+          margin-top: 5%;
+          font-size: 1.2em;
+          font-weight: $highlight-font-weight;
+          color: $primary;
+        }
+      }
+
+      .lowerTile {
+        background-color: $lower-tile-bg;
+        color: $primary;
+        text-align: center;
+
+        .subtitle {
+          color: $black-color;
+
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 992px) {
+  .root {
+    margin-bottom: 10%;
+
+    .bannerWrapper {
+      flex-direction: column;
+      height: auto;
+      align-items: center;
+
+      .bigTile {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .smallTilesWrapper {
+        width: 100%;
+        margin: 0;
+
+        .smallTile {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}

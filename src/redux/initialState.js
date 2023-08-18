@@ -20,6 +20,12 @@ const initialState = {
         'https://img.freepik.com/free-photo/mid-century-modern-living-room-interior-design-with-monstera-tree_53876-129804.jpg?w=1060&t=st=1691091913~exp=1691092513~hmac=69edab31759abb4a970ac9b079d43ab465a4892110676ffb30d8f1410acd2d9f',
       oldPrice: 35,
       isFavorite: true,
+      promoted: true,
+      brand: {
+        name: 'brand1',
+        img:
+          'https://images.unsplash.com/photo-1529697216570-f48ef8f6b2dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGFzdGVsfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60',
+      },
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -33,6 +39,11 @@ const initialState = {
         'https://img.freepik.com/free-photo/picture-frame-by-velvet-armchair_53876-132788.jpg?w=740&t=st=1691092051~exp=1691092651~hmac=29a0927b717ac30003578f5e65c4534743e810bf01a7dd0c73de41f0e4a92bd6',
       oldPrice: 35,
       isFavorite: false,
+      brand: {
+        name: 'brand2',
+        img:
+          'https://images.unsplash.com/photo-1564951434112-64d74cc2a2d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
+      },
     },
     {
       id: 'aenean-ru-bristique-3',
@@ -47,6 +58,11 @@ const initialState = {
         'https://img.freepik.com/free-photo/empty-flat-interrior-with-elements-decoration_1303-23910.jpg?w=1060&t=st=1691092096~exp=1691092696~hmac=5553d73cef167f9636899c7c10ed201833aa7322872624cf09c9321d8bf79381',
       classFav: false,
       classCom: false,
+      brand: {
+        name: 'brand3',
+        img:
+          'https://images.unsplash.com/photo-1458682625221-3a45f8a844c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80',
+      },
     },
     {
       id: 'aenean-ru-bristique-4',
@@ -61,6 +77,11 @@ const initialState = {
         'https://img.freepik.com/free-photo/wooden-sideboard-table-with-books-vase_53876-144976.jpg?w=740&t=st=1691092114~exp=1691092714~hmac=4da81c9eb3ac98a12bd76143084651df4ea2eef418c5371307a603cccc052917',
       classFav: true,
       classCom: true,
+      brand: {
+        name: 'brand4',
+        img:
+          'https://images.unsplash.com/photo-1606818616331-32cf3239c93c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
+      },
     },
     {
       id: 'aenean-ru-bristique-5',
@@ -75,6 +96,11 @@ const initialState = {
         'https://img.freepik.com/free-photo/mockup-frames-living-room-interior-with-chair-decorscandinavian-style_41470-5148.jpg?w=740&t=st=1691092130~exp=1691092730~hmac=e1e8b7e32370eff0e53577028449897d30995e7892d19157ac1f51e74487e57d',
       classFav: false,
       classCom: false,
+      brand: {
+        name: 'brand5',
+        img:
+          'https://images.unsplash.com/photo-1604937455095-ef2fe3d46fcd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
+      },
     },
     {
       id: 'aenean-ru-bristique-6',
@@ -89,6 +115,11 @@ const initialState = {
         'https://img.freepik.com/free-photo/wood-sideboard-living-room-interior-with-copy-space_43614-828.jpg?w=996&t=st=1691092208~exp=1691092808~hmac=85e1fe43d3dbbcc62b3fbb904a884f10a85a76c57b75bd6007762511cb935c11',
       classFav: false,
       classCom: false,
+      brand: {
+        name: 'brand6',
+        img:
+          'https://images.unsplash.com/photo-1568738351265-c7065f5d4293?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
+      },
     },
     {
       id: 'aenean-ru-bristique-7',
@@ -257,6 +288,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       isFavorite: false,
+      isOpen: false,
     },
     {
       id: 'aenean-ru-bristique-23',
@@ -267,6 +299,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       isFavorite: false,
+      isOpen: false,
     },
     {
       id: 'aenean-ru-bristique-24',
@@ -277,12 +310,14 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       isFavorite: false,
+      isOpen: false,
     },
   ],
   cart: {
     products: [],
   },
-  comparableProducts: [], // array with selected products for comparison
+  mode: 'laptop',
+  comparableProducts: [],
 };
 
 export default initialState;

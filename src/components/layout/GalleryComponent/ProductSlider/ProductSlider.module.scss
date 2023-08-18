@@ -1,0 +1,44 @@
+@import "../../../../styles/settings.scss";
+
+.sliderColumn {
+  height: 90px;
+  position: relative;
+  padding: 9px;
+  display: flex;
+  gap: 10px;
+  border: 1px solid $gallery-slider-border;
+  cursor: pointer;
+
+  .leftButton {
+    height: 60px;
+    width: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $icons-font-size;
+  }
+  
+  .rightButton {
+    height: 60px;
+    width: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $icons-font-size;
+  }
+
+  .product {
+      background-image: url('https://img.freepik.com/free-psd/armchair-pillow_176382-861.jpg?w=826&t=st=1692307065~exp=1692307665~hmac=95deecddeffd1631abb91388e55bba543a7ac412e925ebb6227eaf008e058e2c');
+      background-size: cover;
+      opacity: 0.5;
+  }
+
+  .product:active {
+      background-color: lightGray;
+      opacity: 1;
+  }
+
+  .product:nth-child(3) {
+      opacity: 1;
+  }
+}

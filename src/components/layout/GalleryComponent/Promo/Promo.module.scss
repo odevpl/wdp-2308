@@ -1,0 +1,41 @@
+@import "../../../../styles/settings.scss";
+
+.promo {
+  position: absolute;
+  bottom: 200px;
+  right: 76px;
+  z-index: 1;
+  color: $gallery-promo-color;
+
+  &::before{
+      content:'';
+      position: absolute;
+      top: -101px;
+      right: -9px;
+      background-color: $gallery-promo-bg;
+      opacity: 0.6;
+      z-index: 1;
+      width: 105px;
+      height: 105px;
+      border-radius: 53px;
+  }
+
+  h3 {
+      position: absolute;
+      z-index: 2;
+      top:-40px;
+      left: -47px;
+      transform: translate(-50%, -80%);
+      font-size: 24px;
+  }
+
+  h6 {
+      position: absolute;
+      z-index: 2;
+      top:-40px;
+      left: -46px;
+      transform: translate(-50%, 30%);
+      font-size: 16px;
+      text-decoration: line-through;
+  }
+}

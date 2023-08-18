@@ -9,6 +9,8 @@ $lightGray-color: #e1e1e1;
 $darken-white-color: #e2e2e2;
 $blueWhite-color: #f4f5f7;
 $veryDarkGray-color: #2a2a2a;
+$green-color: #79ae30;
+$light-green-color: #79ae30;
 
 /* HEADER */
 $header-topbar-bg: $darkGray-color;
@@ -38,6 +40,13 @@ $panelbar-border: $darken-white-color;
 $list-color: $white-color;
 $link-color: $lightGray-color;
 
+/* DEALS BANNER */
+$upper-tile-bg: #EAEDF7;
+$lower-tile-bg: #FAF3F8;
+$highlight-font-weight: 600;
+$big-tile-base-font-size: 28px;
+$small-tile-base-font-size: 22px;
+
 /* PRODUCT BOX */
 $product-bg: $white-color;
 $product-border: $lightGray-color;
@@ -56,6 +65,9 @@ $featurebox-border: $gray-color;
 $featurebox-bg: $white-color;
 $featurebox-hover: $white-color;
 $featurebox-icon-color: $black-color;
+
+/* DEALS BANNER */
+$dealsbanner-font: 'Poppins', sans-serif;
 
 /* BUTTON */
 $button-color: $white-color;
@@ -81,3 +93,32 @@ $animation-time: 250ms;
   transition-duration: $animation-time;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
+
+/*POPUP*/
+$popup-background-color: $white-color;
+$popup-detail-name-font-size: 25px;
+$popup-button-font-size: 18px;
+$popup-detail-id-font-size: 12px;
+$popup-detail-old-price-font-size: 35px;
+
+/* BRANDS BANNER */
+$icons-font-size: 7px;
+
+/* Gallery */
+$gallery-categories-color: $black-color;
+$gallery-categories-bg: $white-color;
+$gallery-categories-border: $lightGray-color;
+$gallery-promo-color: $white-color;
+$gallery-promo-bg: $black-color;
+$gallery-productinfo-bg: $white-color;
+$gallery-productinfo-corner: $black-color;
+$gallery-leftbutton-bg: $black-color;
+$gallery-leftbutton-color: $white-color;
+$gallery-slider-border: $lightGray-color;
+$gallery-border-font-color: $lightGray-color;
+$gallery-border-color-active: $primary;
+$gallery-title-color: $primary;
+$gallery-secondary-text-color: $light-green-color;
+$gallery-main-text-color: $primary;
+$gallery-btn-right-font-color: $white-color;
+$gallery-btn-right-bg: $green-color;

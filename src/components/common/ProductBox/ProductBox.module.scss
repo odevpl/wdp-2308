@@ -133,4 +133,18 @@
     }
   }
 
+  .detilPrice {
+    font-size: $popup-detail-old-price-font-size;
+    font-weight: 600;
+  }
+
+  .detilOldPrice {
+    font-weight: 600;
+    color: $gray-color;
+  }
+
+  .detilPromo,
+  .detilStars {
+    font-weight: 600;
+  }
 }

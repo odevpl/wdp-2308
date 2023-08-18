@@ -1,0 +1,59 @@
+@import "../../../../styles/settings.scss";
+
+.photo {
+  position: relative;
+
+  .image {
+      width: 100%;
+      height: 603px;
+      object-fit: cover;
+      position: relative;
+  }
+
+  .photoInfo {
+      position: absolute;
+      top: 71px;
+      left: 62px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap:25px;
+
+      .bedPrice {
+          display: flex;
+          align-items: flex-end;
+          gap: 5px;
+      }
+
+      .bedPrice h5:first-child {
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: 18px;
+      }
+
+      .bedPrice h1:last-child {
+          color: $gallery-secondary-text-color;
+          margin-bottom: 5px;
+          font-weight: 600;
+      }
+
+      .name {
+          color: $primary;
+          font-size: 48px;
+          color: $gallery-main-text-color;
+          font-weight: 600;
+      }
+
+      .btnPhoto {
+          border: none;
+          width: 136px;
+          height: 54px;
+          border-radius: 3px;
+          background-color: $gallery-btn-right-bg;
+          font-size: 14px;
+          text-transform: uppercase;
+          color: $gallery-btn-right-font-color;
+          font-weight: 600;
+      }
+  }
+}

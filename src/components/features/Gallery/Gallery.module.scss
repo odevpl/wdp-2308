@@ -1,0 +1,31 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  .FurnitureBar {
+      margin-bottom: 30px;
+      position: relative;
+      border-bottom: 4px solid $gallery-border-font-color;
+
+      .heading {
+          position: relative;
+
+          h3 {
+              margin: 0;
+              color: $gallery-title-color;
+              font-size: 20px;
+              line-height: 38px;
+              letter-spacing: 1px;
+              text-transform: uppercase;
+          }
+
+          &::before {
+              content: "";
+              position: absolute;
+              bottom: -4px;
+              left: 0;
+              width: 45px;
+              border-bottom: 4px solid $gallery-border-color-active;
+          }
+      }
+  }
+}

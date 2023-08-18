@@ -5,10 +5,15 @@ import FadeIn from 'react-fade-in';
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
 import Swipeable from '../../views/Swipeable/Swipeable';
+import { useSelector } from 'react-redux';
+
+import { getMode } from '../../../redux/rwdRedux';
 
 const NewFurniture = props => {
   const [activePage, setActivePage] = useState(0);
   const [activeCategory, setActiveCategory] = useState('bed');
+
+  const responsiveMode = useSelector(getMode);
 
   const handlePageChange = newPage => {
     setActivePage(newPage);
@@ -29,15 +34,23 @@ const NewFurniture = props => {
       setActivePage(activePage - 1);
     }
   };
+
+  let productsPerPage = 8;
+  if (responsiveMode.mode === 'tablet') {
+    productsPerPage = 2;
+  } else if (responsiveMode.mode === 'mobile') {
+    productsPerPage = 1;
+  }
+
   const { categories, products } = props;
 
   const categoryProducts = products.filter(item => item.category === activeCategory);
-  const pagesCount = Math.ceil(categoryProducts.length / 8);
+  const pagesCount = Math.ceil(categoryProducts.length / productsPerPage);
 
   const dots = [];
   for (let i = 0; i < pagesCount; i++) {
     dots.push(
-      <li>
+      <li key={`dot-${i}`}>
         <a
           onClick={() => handlePageChange(i)}
           className={i === activePage && styles.active}
@@ -77,13 +90,13 @@ const NewFurniture = props => {
         </div>
         <Swipeable leftAction={leftAction} rightAction={rightAction}>
           <div className='row'>
-            {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-              <div key={item.id} className='col-12 col-sm-6 col-md-4 col-xl-3'>
-                <FadeIn>
+            {categoryProducts
+              .slice(activePage * productsPerPage, (activePage + 1) * productsPerPage)
+              .map(item => (
+                <div key={item.id} className='col-12 col-sm-6 col-md-4 col-xl-3'>
                   <ProductBox {...item} />
-                </FadeIn>
-              </div>
-            ))}
+                </div>
+              ))}
           </div>
         </Swipeable>
       </div>

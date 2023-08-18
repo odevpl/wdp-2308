@@ -106,12 +106,12 @@
       }
     }
   }
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+  @media (max-width: 360px) {
+
+  }
+
+  @media (min-width: 361px) and (max-width: 768px) {
+
   }
 }
